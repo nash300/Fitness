@@ -6,7 +6,7 @@ body {
 }
 
 #banner {
-    width: 1200px; 
+    width: 100%; max-width: 1200px;
     height: 400px;
     margin: auto;
     background: url(/img/background.jpg);
@@ -27,13 +27,15 @@ ul li {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    opacity: .8;
+    opacity: .9;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 ul li a{
     color: white;
     text-decoration: none;
     display: block;
+    border: 1px solid rgb(37, 35, 32);
 }
 
 ul li ul li{
@@ -49,4 +51,38 @@ ul li a:hover {
 
 ul li:hover ul li{
     display: block;
+}
+
+#display {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    display: flex;
+    background-color: white;
+}
+
+#shortcuts {
+    position: sticky;
+    width: 70%;
+    height: auto;
+}
+
+#sidebar {
+    width: 30%;
+    height: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(240, 239, 239);
+    color: rgb(0, 0, 0);
+    text-align: unset;
+    padding: 15px;
+} 
+
+#shortcuts div img {
+    width: 49%;
+    float: left;
+    margin: 2px;
+}
+
+#shortcuts div img:hover {
+    opacity: .9;
 }
