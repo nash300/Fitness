@@ -80,13 +80,14 @@ ul li:hover ul li{
 
 #sidebar {
     width: 30%;
-    height: 800px;
+    height: 595px;
     overflow: scroll;
     font-family: fantasy;
     background-color: rgb(240, 239, 239);
     color: rgb(0, 0, 0);
     text-align: unset;
     padding: 15px;
+    opacity: .9;
 } 
 
 #shortcuts div img {
