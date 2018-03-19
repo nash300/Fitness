@@ -72,30 +72,30 @@
                        
                         <tr>
                             
-                            <td>Standard <input type="radio" name="unit" onclick="standard()"></td>
-                            <td>Metric <input type="radio" name="unit" onclick="metricRadio()" checked></td>
+                            <td>Standard <input id="radio_standard" type="radio" name="unit" onclick="standard()"></td>
+                            <td>Metric <input id="radio_metric" type="radio" name="unit" onclick="metricRadio()" checked></td>
                             <td></td>
                     
                         </tr>
 
                         <tr>
                             <td>Your Height:</td>
-                            <td><input type="number" maxlength="4" size="4" id="height1"></td>
+                            <td><input type="number" id="height1"></td>
                             <td id="h_unit1"></td> 
-                            <td class ="hidden"><input id="height2"></td> <!-- height2 & unitname2 will be hidden for Metric unit -->
-                            <td id="h_unit2" class ="hidden"></td>
+                            <td><input type="number" id="height2" ></td> <!-- height2 & unitname2 will be hidden for Metric unit -->
+                            <td id="h_unit2"></td>
                         
                         </tr>
 
                         <tr>
                             <td>Your Weight:</td>
-                            <td><input type="number" maxlength="4" size="4" id="weight"></td>
+                            <td><input type="number" id="weight"></td>
                             <td id="w_unit"></td>
                         
                         </tr>
 
                         <tr>
-                            <td><button>Calculate</button></td>
+                            <td><button onclick="cal()">Calculate</button></td>
                         </tr>
                
                     </table>
@@ -106,7 +106,7 @@
             
             
             <div id="result">
-
+                    Your MBI is: <p id="bmi"></p>
             </div>
         
         
