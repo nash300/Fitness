@@ -1,5 +1,5 @@
 
-window.onload = metricRadio;
+window.onload = metricRadio; // selects metric unit on load.
 
 
 function metricRadio() {  // hides input & lable for "inches".
@@ -23,6 +23,8 @@ function standardRadio() { // adds feets & inches to Height input
 }
 
 
+/* ********************************************************************************** */
+                                // calculator  //
 
 function cal() {  // this function determines which function needs to be nun according to unit type.
 
@@ -36,14 +38,10 @@ function cal() {  // this function determines which function needs to be nun acc
     }
     
 
-
-/* ********************************************************************************** */
-
-
-var globalBmi = "" ;                         // Holds BMI result.
+var globalBmi = "";         // Holds BMI result.
 
     
-function cal_metric() {                                             // counts BMI for metric units.
+function cal_metric() {      // counts BMI for metric units.
     
     var cm = parseInt(document.getElementById("height1").value)/(100);
     var kg = parseInt(document.getElementById("weight").value);
@@ -55,7 +53,7 @@ function cal_metric() {                                             // counts BM
     }
 
 
-function cal_standard() {
+function cal_standard() {     // counts BMI for standard units.
 
     var pounds = parseInt(document.getElementById("weight").value);
     var feets = parseInt(document.getElementById("height1").value);
@@ -74,30 +72,38 @@ function cal_standard() {
 
 
 
-function result() {
+function result() {  // categorize BMI value & display the result.
 
     if (globalBmi<16) {
-        document.getElementById("bmi").innerHTML = "Severe Thinness";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Severe Thinness) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "red";
     }
     if (globalBmi>16 && globalBmi<17) {
-        document.getElementById("bmi").innerHTML = "Moderate Thinness";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Moderate Thinness) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "red";
     }
     if (globalBmi>17 && globalBmi<18.5) {
-        document.getElementById("bmi").innerHTML = "Mild Thinness";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Mild Thinness) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "lightcoral";
     }
     if (globalBmi>18.5 && globalBmi<25) {
-        document.getElementById("bmi").innerHTML = "Normal";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Normal)";
+        document.getElementById("result").style.backgroundColor = "green";
     }
     if (globalBmi>25 && globalBmi<30) {
-        document.getElementById("bmi").innerHTML = "Overweight";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Overweight) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "lightcoral";
     }
     if (globalBmi>30 && globalBmi<35) {
-        document.getElementById("bmi").innerHTML = "Obese Class I";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Obese Class I) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "red";
     }
     if (globalBmi>35 && globalBmi<40) {
-        document.getElementById("bmi").innerHTML = "Obese Class II";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Obese Class II) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "red";
     }
     if (globalBmi>40) {
-        document.getElementById("bmi").innerHTML = "Obese Class III";
+        document.getElementById("bmi").innerHTML = "Your BMI is: "+globalBmi+"  (Obese Class III) <br> Normal BMI is: 18.5 - 25";
+        document.getElementById("result").style.backgroundColor = "red";
     }
 }
