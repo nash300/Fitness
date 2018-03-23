@@ -76,7 +76,7 @@ ul li:hover ul li{
 #form {
     width: 60%;
     height: auto;
-    background-color: rgb(190, 204, 250);
+    background-color: rgb(150, 150, 150);
     border-radius: 10px;
     line-height: 40px;
     text-align: left;
@@ -106,8 +106,19 @@ button {
     left: 0px;
     width: 30%;
     height: auto;
-    background-color: rgb(190, 204, 250);
+    background-color:rgb(150, 150, 150);
     float: right;
     border-radius: 10px;
     padding: 5px;
+}
+
+#progressMain {
+    width: 100%;
+    background-color: blue;
+}
+
+#progressSub {
+    width: 25%;
+    height: 45px;
+    background-color: brown;
 }
