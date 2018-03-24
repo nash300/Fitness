@@ -6,7 +6,7 @@ body {
 }
 
 #wrapper {
-    width: 1200px;
+    width: 960px;
     height: auto;
     margin: auto;
 }
@@ -19,7 +19,7 @@ body {
 #banner {
     width: 100%; 
     max-width: 1200px;
-    height: 400px;
+    height: 350px;
     margin: auto;
     background: url(/img/background.jpg);
     background-repeat: no-repeat;
