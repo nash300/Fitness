@@ -13,6 +13,7 @@
 
 <body>
     
+    
     <div id="wrapper">
         
         <div id="ban_menu">
@@ -53,24 +54,23 @@
 
         
         
-        <div id="display"
-        style="width: 100%;
-        height: 650px;
-        margin: 20px auto auto auto;">
+        <div id="display">
             
             
-            <div id="text"
-            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            padding: 50px;">
-
-                <p> <strong>B</strong>ody mass index is a measure of body fat and is commonly used within the health industry to determine 
-                    whether your weight is healthy. BMI applies to both adult men and women and is the calculation of body weight in 
-                    relation to height. </p> <hr>
+            <div id="video" align="center" style="margin-top: 60px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0JMhoCIiQcM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+                <hr>
             </div>
 
-           
+                <div id="text" align="center">
+                    <p> <strong>B</strong>ody mass index is a measure of body fat and is commonly used within the health industry to determine 
+                    whether your weight is healthy. BMI applies to both adult men and women and is the calculation of body weight in 
+                    relation to height.</p>
+                </div>
+            
+            
 
-            <div id="form"
+           <div id="form"
             style="width: 60%;
             height: auto;
             background-color: rgb(150, 150, 150);
@@ -81,62 +81,60 @@
             font-size: 14px;
             float: left;">
                 
-                <form action="#">
-                    <table>
-                       
-                        <tr>
+                    <form action="#">
+                        <table>
+                        
+                            <tr>
+                                
+                                <td>Standard <input id="radio_standard" type="radio" name="unit" onclick="standardRadio()"></td>
+                                <td>Metric <input id="radio_metric" type="radio" name="unit" onclick="metricRadio()" checked></td>
+                                <td></td>
+                        
+                            </tr>
+
+                            <tr>
+                                <td>Your Height:</td>
+                                <td><input type="number" id="height1"></td>
+                                <td id="h_unit1"></td> 
+                                <td><input type="number" id="height2" ></td> <!-- height2 & unitname2 will be hidden for Metric unit -->
+                                <td id="h_unit2"></td>
                             
-                            <td>Standard <input id="radio_standard" type="radio" name="unit" onclick="standardRadio()"></td>
-                            <td>Metric <input id="radio_metric" type="radio" name="unit" onclick="metricRadio()" checked></td>
-                            <td></td>
-                    
-                        </tr>
+                            </tr>
 
-                        <tr>
-                            <td>Your Height:</td>
-                            <td><input type="number" id="height1"></td>
-                            <td id="h_unit1"></td> 
-                            <td><input type="number" id="height2" ></td> <!-- height2 & unitname2 will be hidden for Metric unit -->
-                            <td id="h_unit2"></td>
-                        
-                        </tr>
+                            <tr>
+                                <td>Your Weight:</td>
+                                <td><input type="number" id="weight"></td>
+                                <td id="w_unit"></td>
+                            
+                            </tr>
 
-                        <tr>
-                            <td>Your Weight:</td>
-                            <td><input type="number" id="weight"></td>
-                            <td id="w_unit"></td>
-                        
-                        </tr>
-
-                        <tr>
-                            <td><button onclick="cal()"
-                                style="background-color: rgb(47, 45, 68);
-                                font-size: 14px;
-                                padding: 10px;
-                                border-radius: 10px;
-                                color: white;
-                                ">Calculate</button></td>
-                        </tr>
-               
-                    </table>
-                </form>
+                            <tr>
+                                <td><button onclick="cal()"
+                                    style="background-color: rgb(47, 45, 68);
+                                    font-size: 14px;
+                                    padding: 10px;
+                                    border-radius: 10px;
+                                    color: white;
+                                    ">Calculate</button></td>
+                            </tr>
+                
+                        </table>
+                    </form>
            
 
             </div>
-            
-            
+
+           
             <div id="result"
-            style="left: 0px;
+            style="float:right;
             width: 30%;
             background-color:rgb(150, 150, 150);
-            float: right;
             border-radius: 10px;
             padding: 5px;">
                     Result: <br>
                     <p id="bmi"></p>
             </div>
-        
-        
+
         </div>
 
     </div>

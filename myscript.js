@@ -19,7 +19,7 @@ function standardRadio() { // adds feets & inches to Height input
 
     document.getElementById("h_unit1").innerHTML = "feets";
     document.getElementById("w_unit").innerHTML = "pounds";
-    document.getElementById("h_unit2").innerHTML = "inches";
+    document.getElementById("h_unit2").innerHTML = "inches"; 
 }
 
 
@@ -57,8 +57,8 @@ function cal_standard() {     // counts BMI for standard units.
 
     var pounds = parseInt(document.getElementById("weight").value);
     var feets = parseInt(document.getElementById("height1").value);
-    var inches = parseInt(document.getElementById("height2").value);
-    
+                var inches = parseInt(document.getElementById("height2").value);
+                
     var pToKg = pounds * 0.45;                  // pound to Kg.
     var heightTemp = (feets*12) + inches;       // convert and add feets & inches.
     var heightToM = heightTemp * 0.025;         // convert feets to meters.
@@ -66,7 +66,7 @@ function cal_standard() {     // counts BMI for standard units.
     var answer = pToKg / sHeight;               // weight/height.
 
     globalBmi = answer.toFixed(1);
-    
+                
     result();
     }
 
